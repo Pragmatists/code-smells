@@ -12,7 +12,7 @@ public class BadNamedGameTest {
     public static final int SELECTED = 4;
 
     @Test
-    public void returns_selected_items() throws Exception {
+    public void returns_selected_items() {
         int[][] board = new int[][]{
                 {1, 5},
                 {2, 6},

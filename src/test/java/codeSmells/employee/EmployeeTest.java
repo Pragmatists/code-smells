@@ -9,17 +9,17 @@ public class EmployeeTest {
 	@Test
 	public void noJobsPerformed() {
 		Manager deadBeat = new Manager();
-		assertEquals(0, deadBeat.jobsCompletedCount());
+		assertEquals(0, deadBeat.jobsDoneCount());
 		assertEquals(0, deadBeat.jobsSkippedCount());
 	}
 	
 	@Test
 	public void threeJobsPerformedNoneSkippedByManager() {
-		Manager productiveManager = new Manager();
+		Employee productiveManager = new Manager();
 		productiveManager.performJob(Job.MANAGE);
 		productiveManager.performJob(Job.MARKET);
 		productiveManager.performJob(Job.SELL);
-		assertEquals(3, productiveManager.jobsCompletedCount());
+		assertEquals(3, productiveManager.jobsDoneCount());
 		assertEquals(0, productiveManager.jobsSkippedCount());
 	}
 	
@@ -28,7 +28,7 @@ public class EmployeeTest {
 		Manager unbusyManager = new Manager();
 		unbusyManager.performJob(Job.TEST);
 		unbusyManager.performJob(Job.SELL);
-		assertEquals(1, unbusyManager.jobsCompletedCount());
+		assertEquals(1, unbusyManager.jobsDoneCount());
 		assertEquals(1, unbusyManager.jobsSkippedCount());
 	}
 	

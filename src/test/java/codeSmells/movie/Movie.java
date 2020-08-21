@@ -3,6 +3,7 @@ package codeSmells.movie;
 public class Movie {
     public static final int REGULAR = 0;
     public static final int NEW_RELEASE = 1;
+    public static final int CHILDREN = 2;
 
     String title;
     int priceCode;
@@ -20,6 +21,8 @@ public class Movie {
             return result;
         } else if (priceCode == NEW_RELEASE) {
             return daysRented * 3;
+        } else if (priceCode == CHILDREN) {
+            return daysRented;
         } else {
             throw new IllegalArgumentException("Incorrect Price Code");
         }
