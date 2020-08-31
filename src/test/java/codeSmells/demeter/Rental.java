@@ -1,8 +1,8 @@
 package codeSmells.demeter;
 
 class Rental {
-    Movie movie;
-    int daysRented;
+    private Movie movie;
+    private int daysRented;
 
     public Rental(Movie movie, int daysRented) {
         this.movie = movie;
